@@ -1,0 +1,35 @@
+<h1>Fight</h1>
+<div class="row">
+    <div class="col-sm-6" data-ng-if="data.pro1">
+        <h2 style="color:red;" data-ng-if="data.pro1.points > data.pro2.points">WINNER</h2>
+        <h2 style="color:red;" data-ng-if="data.pro2.points > data.pro1.points">LOSER</h2>
+        <img class="gitpic" src="{{ data.pro1.avatar }}" alt="Pro Pic">
+        <h4>Name: {{ data.pro1.name }}</h4>
+        <h3>Points:</h3>
+        <h4>Followers: {{ data.pro1.followers * 3 }}</h4>
+        <h4>Following: {{ data.pro1.following * -2 }}</h4>
+        <h4>Repositories: {{ data.pro1.repos * 5 }}</h4>
+        <h4>Forks: {{ data.pro1.forks * 3 }}</h4>
+        <h4>Stars: {{ data.pro1.stars }}</h4>
+        <h4>Total: {{ data.pro1.points }}</h4>
+    </div>
+    <div class="col-sm-6" data-ng-if="data.pro2">
+        <h2 style="color:red;" data-ng-if="data.pro2.points > data.pro1.points">WINNER</h2>
+        <h2 style="color:red;" data-ng-if="data.pro1.points > data.pro2.points">LOSER</h2>
+        <img class="gitpic" src="{{ data.pro2.avatar }}" alt="Pro Pic">
+        <h4>Name: {{ data.pro2.name }}</h4>
+        <h3>Points:</h3>
+        <h4>Followers: {{ data.pro2.followers * 3 }}</h4>
+        <h4>Following: {{ data.pro2.following * -2 }}</h4>
+        <h4>Repositories: {{ data.pro2.repos * 5 }}</h4>
+        <h4>Forks: {{ data.pro2.forks * 3}}</h4>
+        <h4>Stars: {{ data.pro2.stars}}</h4>
+        <h4>Total: {{ data.pro2.points }}</h4>
+    </div>
+    <div data-ng-if="data.pro1 && data.pro2" class="col-xs-12 text-center">
+        <h2 style="color:red;" data-ng-if="data.pro1.points == data.pro2.points">DRAW</h2>
+    </div>
+    <div class="col-xs-12" data-ng-if="!(data.pro1 && data.pro2)">
+        <p>Please Provide Two Profiles</p>
+    </div>
+</div>

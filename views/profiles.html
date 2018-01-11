@@ -1,0 +1,24 @@
+<h1>Profiles</h1>
+<div class="row">
+    <div class="col-sm-6" data-ng-if="data.pro1">
+        <img class="gitpic" src="{{ data.pro1.avatar }}" alt="Pro Pic">
+        <h4>Name: {{ data.pro1.name }}</h4>
+        <h4>Followers: {{ data.pro1.followers }}</h4>
+        <h4>Following: {{ data.pro1.following }}</h4>
+        <h4>Repositories: {{ data.pro1.repos }}</h4>
+        <h4>Forks: {{ data.pro1.forks }}</h4>
+        <h4>Stars: {{ data.pro1.stars }}</h4>
+    </div>
+    <div class="col-sm-6" data-ng-if="data.pro2">
+        <img class="gitpic" src="{{ data.pro2.avatar }}" alt="Pro Pic">
+        <h4>Name: {{ data.pro2.name }}</h4>
+        <h4>Followers: {{ data.pro2.followers }}</h4>
+        <h4>Following: {{ data.pro2.following }}</h4>
+        <h4>Repositories: {{ data.pro2.repos }}</h4>
+        <h4>Forks: {{ data.pro2.forks }}</h4>
+        <h4>Stars: {{ data.pro2.stars }}</h4>
+    </div>
+    <div class="col-xs-12" data-ng-if="(!data.pro1 && !data.pro2)">
+        <p>No Profile Provided.</p>
+    </div>
+</div>

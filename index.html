@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Github Profile Fights</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-ng-app="testapp">
+    <div class="container">
+        <h1>Github Profile Fights</h1>
+        <div class="row" data-ng-controller="FetchDataController">
+            <div class="col-sm-5">
+                <input type="text" data-ng-model="pro1" class="form-control" placeholder="Enter Github ID">
+            </div>
+            <div class="col-sm-5">
+                <input type="text" data-ng-model="pro2" class="form-control" placeholder="Enter Github ID">
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-info" data-ng-click="getData()">Submit</button>
+            </div>
+            <hr>
+        </div>
+        <div class="btn-group">
+            <a href="#/" class="btn btn-info">Profiles</a>
+            <a href="#/fight" class="btn btn-info">Fight</a>
+        </div>
+        <div class="container" data-ng-view></div>
+    </div>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>
